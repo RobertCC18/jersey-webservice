@@ -14,8 +14,8 @@ public class DB_probe {
 
 	public static String Itemlist() throws SQLException {
 	String ingred = "";
-		String user = "appdatacheck";
-		String password = "rgAr3C00l";
+		String user = "yourtablename";
+		String password = "******";
 		String query = "use PantryList DECLARE @result varchar(1000), @result2 varchar(1000) SET @result = '' SELECT @result = @result + Items + ', ' FROM Pantry_List select substring(@result, 0, len(@result) - 1) SET @result2 = '' SELECT @result2 = @result2 + Quantity + ',' FROM Pantry_List select substring(@result2, 0, len(@result2) - 1)";
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
